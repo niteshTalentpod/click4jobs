@@ -6,11 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class JobSearchPipe implements PipeTransform {
 
   transform(items: any, filter: any, defaultFilter: boolean): any {
-    if (!filter){
+    if (!filter) {
       return items;
     }
 
-    if (!Array.isArray(items)){
+    if (!Array.isArray(items)) {
       return items;
     }
 

@@ -1,12 +1,31 @@
 
 <mat-drawer-container class="container-fluid">
-    <mat-drawer mode="side" opened><h2>Click4Jobs</h2><br>
-      <a href="" routerLink="/dashboard" routerLinkActive="active">Dashboard</a><br>
-      <a href="" routerLink="/job" routerLinkActive="active">Jobs</a><br>
-      <a href="" routerLink="/application" routerLinkActive="active">Application</a><br>
-      <a href="" routerLink="/profile" routerLinkActive="active">Profile</a>
+    <mat-drawer mode="side" opened><h4>CLICK4JOBS</h4><br>
+      <div>
+      <mat-icon>receipt</mat-icon>
+      <a href="" routerLink="dashboard" routerLinkActive="active">Dashboard</a><br>
+    </div>
+    <div>
+      <mat-icon>equalizer</mat-icon>
+      <a href="" routerLink="job" routerLinkActive="active">Jobs</a><br>
+    </div>
+    <div>
+      <mat-icon>mail</mat-icon>
+      <a href="" routerLink="application" routerLinkActive="active">Application</a><br>
+    </div>
+    <div>
+      <mat-icon>person</mat-icon>
+      <a href="" routerLink="profile" routerLinkActive="active">Profile</a>
+    </div>
     </mat-drawer>
-    <mat-drawer-content>Main content
+    <mat-drawer-content>
+        <mat-toolbar class="profile">
+         <div>
+           <div></div>
+           <div></div>
+           <div class="user"><img src="../../assets/user.png" class="user"></div>
+         </div>
+          </mat-toolbar>
         <router-outlet></router-outlet>
     </mat-drawer-content>
   </mat-drawer-container> 

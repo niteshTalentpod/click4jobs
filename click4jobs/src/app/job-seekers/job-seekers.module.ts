@@ -8,7 +8,7 @@ import { MaterialModule } from '../shared/material Module/material/material.modu
 import { JobSeekersComponent } from './job-seekers.component';
 import { JobSeekerRoutingModule } from './job-seeker-routing.module';
 import { JobSearchPipe } from './job-search.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,11 +23,10 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     MaterialModule,
     JobSeekerRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  exports:[
-    SearchJobComponent,
-    JobSeekersComponent,
+  exports: [
   ]
 })
 export class JobSeekersModule { }

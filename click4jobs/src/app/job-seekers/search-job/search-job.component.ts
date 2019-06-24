@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Post } from '../../post';
 import { POSTS } from '../../postData';
 import { JobService } from '../../job.service';
-import { Sort, MatCardTitle, MatSort } from '@angular/material';
+import { Sort } from '@angular/material';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search-job',
@@ -10,16 +11,17 @@ import { Sort, MatCardTitle, MatSort } from '@angular/material';
   styleUrls: ['./search-job.component.css']
 })
 export class SearchJobComponent implements OnInit {
-public searchText: string;
+
+  public searchText: string;
   job: Post;
   profile: Post[];
 
-  constructor(private service: JobService) {
+  constructor(private service: JobService, private router: Router, private route: ActivatedRoute) {
     this.profile = POSTS.slice();
   }
 
   ngOnInit() {
-    this.getJobs();
+   this.getJobs();
   }
 
   sortData(sort: Sort) {
@@ -32,7 +34,6 @@ public searchText: string;
     this.profile = data.sort((a, b) => {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
-        case 'id': return this.compare(a.id, b.id, isAsc);
         case 'name': return this.compare(a.name, b.name, isAsc);
         case 'domain': return this.compare(a.domain, b.domain, isAsc);
         case 'location': return this.compare(a.location, b.location, isAsc);
@@ -47,6 +48,12 @@ public searchText: string;
   }
   compare(a, b, isAsc) {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+  }
+
+  apply() {
+    this.router.navigate(['application'], {
+      queryParams: { profile: JSON.stringify(this.profile)}
+    });
   }
 
 }

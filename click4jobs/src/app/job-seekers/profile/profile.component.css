@@ -1,0 +1,26 @@
+.userType{
+    display: flex;
+    align-items: center;
+}
+.userType img{
+    height: 200px;
+    padding: 20px;
+    position: relative;
+    margin: auto;
+    left: 400px;
+}
+.pText{
+    text-align: center;
+    position: relative;
+    left: 400px;
+}
+p{
+    text-align: center;
+}
+.type{
+    position: relative;
+    left: 500px;
+}
+table {
+    margin: 0 auto;
+}

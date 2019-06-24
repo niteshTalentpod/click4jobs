@@ -12,11 +12,13 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule, MatOptionModule, MatSelectModule, MatSlideToggleModule, MatNativeDateModule,
-   MatTableModule, MatDrawerContainer, MatSidenavModule,MatSortModule  } from '@angular/material';
+   MatTableModule, MatExpansionModule, MatSidenavModule,MatSortModule, MatStepperModule  } from '@angular/material';
 
 
 @NgModule({
   imports: [
+    MatStepperModule,
+    MatExpansionModule,
     MatCheckboxModule,
     CommonModule,
     MatButtonModule,
@@ -39,6 +41,8 @@ import { MatRadioModule, MatOptionModule, MatSelectModule, MatSlideToggleModule,
 
 ],
   exports: [
+    MatStepperModule,
+    MatExpansionModule,
     MatCheckboxModule,
     MatButtonModule,
     MatToolbarModule,

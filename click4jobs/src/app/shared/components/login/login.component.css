@@ -1,5 +1,37 @@
 .mat-card{
-    width: 300px;
+    width: auto;
     position: absolute;
-    left: 500px;
+    right: 60px;
+    top: 200px;
+    border-radius: 10px;
+}
+.mat-card-header{
+    background-color: #3F51B5;
+    background-size: cover;
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 8px;
+}
+.login{
+    display: flex;
+    width: 100%;
+}
+.loginImg img{
+    width: 100%;
+    max-width: 600px;
+    height: 550px;
+}
+input{
+    width: 100px;
+}
+.example-full-width{
+    width: 400px !important;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+button{
+    position: relative;
+    margin: auto;
+    left: 30%;
 }

@@ -1,3 +1,133 @@
-<p>
-  profile works!
-</p>
+<mat-horizontal-stepper linear #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Personal</ng-template>
+      <table cellspacing="20" cellpadding="20">
+        <tr>
+          <td>
+            <mat-form-field>
+              <input matInput placeholder="First Name" formControlName="FirstName" required>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field>
+              <input matInput placeholder="Last Name" formControlName="LastName" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="demo-full-width">
+              <input formControlName="DOB" matInput [matDatepicker]="picker" placeholder="Date of birth">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker touchUi="true" #picker></mat-datepicker>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-radio-group formControlName="Gender">
+              <mat-radio-button value="Male">Male</mat-radio-button>&nbsp;
+              <mat-radio-button value="Female">Female</mat-radio-button>
+            </mat-radio-group>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input matInput placeholder="City" formControlName="City" required>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <button mat-stroked-button color="primary" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Experiance</ng-template>
+      <p>I am a</p>
+     
+        <mat-radio-group formControlName="Gender">
+            <div class="userType">
+       <div>
+         <img src="./assets/fresher.png">
+         <p class="pText">Fresher</p>
+         <mat-radio-button value="Fresher" class="type" value="Fresher"></mat-radio-button>
+       </div>
+       <div>
+         <img src="./assets/experiance.png">
+         <p class="pText">Experiance</p>
+         <mat-radio-button value="Experiance" class="type" value="Experiance"></mat-radio-button>
+       </div>
+      </div>
+      </mat-radio-group>
+     
+      <div>
+        <button mat-stroked-button color="primary" matStepperPrevious>Back</button>&nbsp;
+        <button mat-stroked-button color="primary" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Education</ng-template>
+      <table>
+        <tr>
+          <td>
+              <mat-form-field>
+                  <input matInput placeholder="Higher Qualification" formControlName="higherDegree" required>
+              </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput placeholder="Institute Name" formControlName="institute" required>
+                </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput placeholder="Passing Year" formControlName="passYear" required>
+                </mat-form-field>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field>
+                        <input matInput placeholder="Marks" formControlName="marks" required>
+                    </mat-form-field>
+                </td>
+              </tr>
+      </table>
+      
+      <div>
+        <button mat-stroked-button color="primary" matStepperPrevious>Back</button>&nbsp;
+        <button mat-stroked-button color="primary" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Skills</ng-template>
+    <table>
+      <tr>
+        <td>
+            <mat-form-field>
+                <input matInput placeholder="Skills" formControlName="skill" required>
+              </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    
+    <div>
+      <button mat-stroked-button color="primary" matStepperPrevious>Back</button>&nbsp;
+      <button mat-stroked-button color="warn" (click)="stepper.reset()">Reset</button>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" (click)="submit()" class="submit" style="float:right;">Submit</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

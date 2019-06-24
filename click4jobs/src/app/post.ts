@@ -1,5 +1,6 @@
 export class Post {
     id: number;
+    title: string;
     name: string;
     description: string;
     company: string;
@@ -14,4 +15,5 @@ export class Post {
     experiance: number;
     active: string;
     location: string;
+    jobType: string;
 }

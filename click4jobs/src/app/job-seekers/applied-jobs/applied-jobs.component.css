@@ -1,0 +1,18 @@
+/* img{
+    position: relative;
+    width: 100px;
+    left: 700px;
+    top: -50px;
+} */
+.header-image{
+    background-image: url('/assets/logo.png');
+    background-size: cover;
+}
+.applied-image{
+    background-image: url('/assets/applied.png');
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+}

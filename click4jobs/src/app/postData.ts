@@ -3,6 +3,7 @@ import { Post } from './post';
 export const POSTS: Post[] = [
     {
         id: 1001,
+        title: 'Urgent Requirement for UI/UX Designer',
         name: 'Software Developer',
         // tslint:disable-next-line: max-line-length
         description: ' Maintaining an understanding of the latest Web applications and programming practices through education, study, and participation in conferences, workshops, and...',
@@ -12,16 +13,18 @@ export const POSTS: Post[] = [
         salary: 84000,
         maxSalary: 150000,
         recruiter: 'Abc pvt Ltd',
-        postedDate: 'date',
-        expiryDate: 'date',
+        postedDate: '20-06-2019',
+        expiryDate: '10-07-2019',
         applicantList: 4,
         experiance: 3,
         active: 'true',
-        location: 'Bangalore'
+        location: 'Kolhapur',
+        jobType: 'Full Time',
     },
     {
         id: 1002,
         name: 'FrontEnd Developer',
+        title: 'Urgent Requirement for UI/UX Designer',
         // tslint:disable-next-line: max-line-length
         description: ' Maintaining an understanding of the latest Web applications and programming practices through education, study, and participation in conferences, workshops, and...',
         company: 'Biotech Solutions - Bangalore, Karnataka',
@@ -30,12 +33,33 @@ export const POSTS: Post[] = [
         salary: 400000,
         maxSalary: 1000000,
         recruiter: 'Robotech pvt Ltd',
-        postedDate: 'date',
-        expiryDate: 'date',
+        postedDate: '15-06-2019',
+        expiryDate: '10-07-2019',
         applicantList: 4,
         experiance: 3,
         active: 'true',
-        location: 'Bangalore'
+        location: 'Bangalore',
+        jobType: 'Part Time',
+    },
+    {
+        id: 1003,
+        name: 'BackEnd Developer',
+        title: 'Urgent Requirement for Backend',
+        // tslint:disable-next-line: max-line-length
+        description: ' Maintaining an understanding of the latest Web applications and programming practices through education, study, and participation in conferences, workshops, and...',
+        company: 'Arthanet Technologies - Hyderabad, Karnataka',
+        domain: 'IT',
+        skillset: 'Java, Micro Services, Web Services, Python, Sql, Oracle ',
+        salary: 600000,
+        maxSalary: 1500000,
+        recruiter: 'It-tech pvt Ltd',
+        postedDate: '18-06-2019',
+        expiryDate: '15-07-2019',
+        applicantList: 4,
+        experiance: 3,
+        active: 'true',
+        location: 'Hyderabad',
+        jobType: 'Internship',
     }
 ];
 

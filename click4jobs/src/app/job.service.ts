@@ -9,9 +9,15 @@ import { POSTS } from './postData';
 })
 export class JobService {
 
+  post: Post;
+
   constructor() { }
 
   getJobs(): Observable<Post[]> {
-    return of(POSTS);
+     return of(POSTS);
   }
+   getJob(id: number): Post {
+     return POSTS.find(x => x.id === id);
+   }
+
 }

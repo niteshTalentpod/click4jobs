@@ -15,11 +15,12 @@ import { MaterialModule } from './shared/material Module/material/material.modul
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import 'hammerjs';
 import { ImageSliderComponent } from './shared/components/image-slider/image-slider.component' ;
-import { SearchJobComponent } from './job-seekers/search-job/search-job.component';
+// import { SearchJobComponent } from './job-seekers/search-job/search-job.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { JobSeekersModule } from './job-seekers/job-seekers.module';
-import { JobSeekersComponent } from './job-seekers/job-seekers.component';
+// import { JobSeekersComponent } from './job-seekers/job-seekers.component';
 import { JobSeekerRoutingModule } from './job-seekers/job-seeker-routing.module';
+import { HomeComponent } from './shared/components/home/home.component';
 
 
 
@@ -33,6 +34,7 @@ import { JobSeekerRoutingModule } from './job-seekers/job-seeker-routing.module'
     ChangePwdComponent,
     MessageComponent,
     ImageSliderComponent,
+    HomeComponent,
 
   ],
   imports: [
@@ -43,11 +45,11 @@ import { JobSeekerRoutingModule } from './job-seekers/job-seeker-routing.module'
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    JobSeekersModule,
-    JobSeekerRoutingModule
+    // JobSeekersModule,
+    // JobSeekerRoutingModule
   ],
-  exports:[
-      
+  exports: [
+
   ],
   providers: [],
   bootstrap: [AppComponent]

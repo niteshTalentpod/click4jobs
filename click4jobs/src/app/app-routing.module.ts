@@ -2,17 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './shared/components/login/login.component';
 import { RegisterComponent } from './shared/components/register/register.component';
-// import { HeaderComponent } from './shared/components/header/header.component';
+import { ImageSliderComponent } from './shared/components/image-slider/image-slider.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
-  // {path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
-  // {path: 'vendor', loadChildren: './vendor/vendor.module#VendorModule'},
-  // {path: 'customer', loadChildren: './customer/customer.module#CustomerModule'}
-
-  // {path: 'header', component: HeaderComponent}
+    {path: '', redirectTo: 'slider', pathMatch: 'full'},
+    {path: 'slider', component: ImageSliderComponent},
+    {path: 'login', component: LoginComponent},
+    {path: 'register', component: RegisterComponent},
+    {path: 'jobSeeker', loadChildren: './job-seekers/job-seekers.module#JobSeekersModule'}
 ];
 
 @NgModule({
